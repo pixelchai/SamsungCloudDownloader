@@ -1,3 +1,5 @@
 .idea/
+cache/
 dev.py
+devv.py
 dev_verif.py
