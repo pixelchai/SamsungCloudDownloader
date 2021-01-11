@@ -203,6 +203,7 @@ def download(start_index=0, batch_size=40, only_one_batch=False, reload=True):
                 driver.get("https://support.samsungcloud.com/#/gallery")
                 global _unload_offset
                 _unload_offset = 0
+                unload()
             else:
                 continue
         finally:
@@ -292,6 +293,7 @@ def download_thumbnails(start_index=0, reload=True):
                             driver.get("https://support.samsungcloud.com/#/gallery")
                             global _unload_offset
                             _unload_offset = 0
+                            unload()
         except RuntimeError:
             print("End reached!")
             break
